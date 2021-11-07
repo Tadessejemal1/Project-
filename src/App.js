@@ -1,18 +1,20 @@
 import React, { Component } from "react";
-import { Navbar , NavbarBrand } from "reactstrap";
-import Menu from './Components/MenuComponent';
+import Main from './Components/MainComponent';
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
+
+
 
 class App extends Component {
+
   render() {
-    return( 
-      <div>
-        <Navbar dark color="primary">
-          <div className="container">
-            <NavbarBrand href="/">foods</NavbarBrand>
+    return (
+      <BrowserRouter>
+          <div className="App">
+            <Main />
           </div>
-        </Navbar>
-        <Menu /> 
-      </div>
+      </BrowserRouter>
+    
     );
   }
 }
